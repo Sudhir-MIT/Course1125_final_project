@@ -1,0 +1,9 @@
+
+data/.DS_Store
+Data
+logs
+valid-cached-data_0.lockfile
+valid-cached-data_0.data-00000-of-00001.tempstate8709360264754421472
+train-cached-data.data-00000-of-00001
+saved_model/benign-vs-malignant_64_rmsprop_0.447.h5
+*.h5
