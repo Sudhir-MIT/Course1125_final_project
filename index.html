@@ -9,22 +9,45 @@
 	<body>
 		<h1 class="text-center">Malenoma Detection</h1>
 
-		<form class = 'p-3 text-center' action="/" method="post" enctype="multipart/form-data">
+<form class = 'p-3 text-center' action="/" method="post" enctype="multipart/form-data">
   Select image to upload
   <input class= "form-control" type="file" name="imageFile" id="imageFile">
   <input class = "btn btn-primary mt-3"type="submit" value="Predict" name="submit">
 </form>
-	
-	<div class="abc" style="width: 70%; padding-left: 30%; padding-top: 0%;">
-		{% if user_image %}
+<style>
+	.results{
+	  width: 70%; 
+	  padding-left: 30%; 
+	  padding-top: 0%;
 
+	}
+	
+	@media screen and (max-width: 900px) {
+   .results {
+      width: 85%; 
+	  padding-left: 15%; 
+	  padding-top: 0%;
+   }
+
+   @media screen and (max-width: 600px) {
+   .results {
+      width: 100%; 
+	  padding-left: 0%; 
+	  padding-top: 0%;
+   }
+		
+	}
+</style>
+		
+<div class="results" >
+	{% if user_image %}
 		<img class="img-thumbnail" src="{{ user_image }}" alt="Uploaded Image">
 		{% endif %}
 
 		{% if message %}
 			<h2 class="text-center"> {{message}}</h2>
 		{% endif %}
-	</div>
+</div>
 
 	</body>
 
